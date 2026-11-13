@@ -2,9 +2,9 @@
 <html lang="sr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Catch App</title>
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" type="image/png" href="icon-192.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest?v=3">
+<link rel="icon" type="image/png" href="icon-192.png?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Catch App">
@@ -15,11 +15,10 @@ img{width:140px;height:140px;border-radius:30px;box-shadow:0 10px 24px rgba(120,
 a{background:#fff;color:#d62b1f;padding:14px 26px;border-radius:12px;text-decoration:none;font-weight:700}
 p{margin:0;max-width:320px;line-height:1.5;opacity:.95}
 </style></head><body>
-<img src="icon-512.png" alt="Catch App">
+<img src="icon-512.png?v=3" alt="Catch App">
 <a id="go" href="https://claude.ai/artifact/N6edCfVS3zmesZbUEXD61B">Otvori Catch App</a>
-<p id="hint">Da dobiješ ikonicu: Android, meni ⋮ pa Instaliraj aplikaciju. iPhone: Podeli pa Dodaj na početni ekran.</p>
+<p id="hint">Ikonica: Android, meni ⋮ pa Instaliraj aplikaciju. iPhone: Podeli pa Dodaj na početni ekran.</p>
 <script>
-if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}
-var st=(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||window.navigator.standalone===true;
-if(st){document.getElementById('hint').style.display='none';setTimeout(function(){location.replace(document.getElementById('go').href)},700)}
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js?v=3').catch(function(){})}
+if(location.search.indexOf('app=1')>-1||window.navigator.standalone===true){document.getElementById('hint').style.display='none';setTimeout(function(){location.replace(document.getElementById('go').href)},500)}
 </script></body></html>
