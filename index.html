@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="sr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Catch App</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Catch App">
+<meta name="theme-color" content="#d62b1f">
+<style>
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#d62b1f;font-family:system-ui,sans-serif;color:#fff}
+img{width:120px;height:120px;border-radius:26px;box-shadow:0 10px 24px rgba(120,16,8,.3);animation:s 2.4s ease-in-out infinite}
+@keyframes s{0%,100%{transform:rotate(0)}50%{transform:rotate(-8deg)}}
+a{background:#fff;color:#d62b1f;padding:12px 22px;border-radius:12px;text-decoration:none;font-weight:600}
+</style></head><body>
+<img src="icon-192.png" alt="Catch App">
+<div>Catch App se otvara…</div>
+<a id="go" href="https://claude.ai/artifact/N6edCfVS3zmesZbUEXD61B">Otvori Catch App</a>
+<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}
+setTimeout(function(){location.replace(document.getElementById('go').href)},900);
+</script></body></html>
